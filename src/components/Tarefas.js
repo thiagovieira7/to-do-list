@@ -19,9 +19,9 @@ export default class Tarefas extends Component {
         <input onChange={this.handleChange} value={this.state.tarefa} />
         <button onClick={this.adicionarTarefa}>adicionar</button>
         <ul>
-          {this.state.tarefas.map((tarefa) => (
-            <li>{tarefa}</li>
-          ))}
+          {this.state.tarefas.map(tarefa => 
+            <li>{tarefa}</li>)
+          }
         </ul>
       </Fragment>
     );
@@ -29,12 +29,12 @@ export default class Tarefas extends Component {
 
   adicionarTarefa() {
     this.setState({
-      tarefa: "",
-      tarefas: [].concat(this.state.tarefas, this.state.tarefa),
+      tarefa : "",
+      tarefas : [].concat(this.state.tarefas, this.state.tarefa)
     });
   }
 
   handleChange(event) {
-    this.setState({ tarefa: event.targt.volue });
+    this.setState({ tarefa : event.targt.volue });
   }
 }
