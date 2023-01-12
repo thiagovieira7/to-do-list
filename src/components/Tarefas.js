@@ -35,6 +35,6 @@ export default class Tarefas extends Component {
   }
 
   handleChange(event) {
-    this.setState({ tarefa: event.target.volue });
+    this.setState({ tarefa: event.target.value });
   }
 }
